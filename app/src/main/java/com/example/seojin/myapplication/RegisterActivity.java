@@ -137,7 +137,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
 
-                if (userPassword.toString().equals(userPassword2) == false) {
+                else if (userPassword.toString().equals(userPassword2) == false) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                     builder.setMessage("비밀번호가 다릅니다.")
                             .setNegativeButton("다시시도", null)

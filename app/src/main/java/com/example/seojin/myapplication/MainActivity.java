@@ -20,21 +20,27 @@ public class MainActivity extends AppCompatActivity {
         counselButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
+                counselButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                listButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                userIfoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
         listButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
+                counselButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                listButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                userIfoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
         userIfoButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
+                counselButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                listButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                userIfoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }
         });
     }
