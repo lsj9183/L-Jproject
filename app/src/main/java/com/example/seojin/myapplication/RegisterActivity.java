@@ -62,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String userID = idText.getText().toString();
                 //중복체크 부분은 DB문제로 true, false 값은 확인 안 하도록 함
-                //if(validate){
+                //if(validate){dsa
                 //    return;
                 //}
                 if(userID.equals("")){
