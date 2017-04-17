@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="register_register">회원가입</string>
+    <string name="login_id">아이디</string>
+    <string name="login_button">로그인</string>
+    <string name="login_name">이름</string>
+    <string name="login_password">비밀번호</string>
+    <string name="login_password2">비밀번호 확인</string>
+    <string name="register_grade">학년</string>
+    <string name="register_grade1">1학년</string>
+    <string name="register_grade2">2학년</string>
+    <string name="register_grade3">3학년</string>
+    <string name="register_grade4">4학년</string>
+    <string name="register_join">가입</string>
+    <string name="register_check">중복확인</string>
 </resources>
