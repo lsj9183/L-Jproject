@@ -13,4 +13,9 @@
     <string name="register_grade4">4학년</string>
     <string name="register_join">가입</string>
     <string name="register_check">중복확인</string>
+    <string name="main_counsel">상담신청</string>
+    <string name="main_userInfor">회원정보</string>
+    <string name="main_list">신청목록</string>
+    <string name="login_skhu">성공회대학교</string>
+    <string name="login_counsel">상담신청 도우미</string>
 </resources>
