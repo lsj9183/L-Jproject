@@ -4,50 +4,99 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.seojin.myapplication.MainActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/counselButton"
-            android:text="@string/main_counsel"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="18dp"
+            android:layout_height="110dp"
+            android:orientation="horizontal"
             android:background="@color/colorPrimary"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" />
-        <Button
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo_splash"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:textSize="50dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="SKHU"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/listButton"
-            android:text="@string/main_list"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="18dp"
-            android:background="@color/colorPrimary"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/userIfoButton"
-            android:text="@string/main_userInfor"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="18dp"
-            android:background="@color/colorPrimary"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" />
+            android:layout_height="match_parent">
+
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/calendarView"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mcv_showOtherDates="all"
+                app:mcv_selectionColor="#00F"
+                />
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_marginTop="5dp">-->
+
+            <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:id="@+id/counselButton"-->
+                <!--android:text="@string/main_counsel"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textSize="18dp"-->
+                <!--android:background="@color/colorPrimary"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="8dp" />-->
+            <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:id="@+id/listButton"-->
+                <!--android:text="@string/main_list"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textSize="18dp"-->
+                <!--android:background="@color/colorPrimary"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="8dp" />-->
+            <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:id="@+id/userIfoButton"-->
+                <!--android:text="@string/main_userInfor"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textSize="18dp"-->
+                <!--android:background="@color/colorPrimary"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginRight="8dp"/>-->
+        <!--</LinearLayout>-->
 
     </LinearLayout>
-
 </RelativeLayout>

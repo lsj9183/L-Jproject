@@ -1,10 +1,19 @@
 package com.example.seojin.myapplication;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.CalendarMode;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,34 +22,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button counselButton = (Button) findViewById(R.id.counselButton);
-        final Button listButton = (Button) findViewById(R.id.listButton);
-        final Button userIfoButton = (Button) findViewById(R.id.userIfoButton);
+        MaterialCalendarView materialCalendarView = (MaterialCalendarView) findViewById(R.id.calendarView);
 
-        counselButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                counselButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                listButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                userIfoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-            }
-        });
+        materialCalendarView.state().edit()
+                .setFirstDayOfWeek(Calendar.MONDAY)
+                .setMinimumDate(CalendarDay.from(2017, 5, 15))
+                .setMaximumDate(CalendarDay.from(2030, 12, 31))
+                .setCalendarDisplayMode(CalendarMode.MONTHS)
+                .commit();
 
-        listButton.setOnClickListener(new View.OnClickListener(){
+        materialCalendarView.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
-            public void onClick(View view){
-                counselButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                listButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                userIfoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-            }
-        });
-
-        userIfoButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                counselButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                listButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                userIfoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
+                Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
             }
         });
     }
